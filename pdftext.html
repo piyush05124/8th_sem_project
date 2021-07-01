@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pdf2text</title>
+</head>
+
+<style>
+.mydiv{
+		border: 2px solid red;
+		background-color: #C37299 ;
+		text-align: center; 
+
+	}
+
+
+.bttn{
+	position: relative;
+	border: 2px solid blue;
+	width: 180px;
+
+	height: 50px;
+
+}	
+.bttn:hover{
+		background-color: #FCF500;
+		border: 4px: #C70039 ; 
+	}
+
+.bttn1
+{
+	position: relative;
+	border: 2px solid blue;
+	width: 200px;
+
+	height: 50px;
+	left: 30px;
+	bottom: 10px
+}	
+.bttn1:hover
+{
+	background-color: #FCF500;
+		border: 4px: #C70039 ;
+}
+
+.ldiv
+{
+	
+	height: 250px;
+	width: 350px;
+	overflow: auto;
+
+}
+.button1 {
+  background-color: #4CAB20; /* Green */
+  
+  color: white;
+  padding: 10px 30px;
+  position: relative;
+  left:  540px;
+ float: left;
+  top:  10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.button1:hover {
+  background-color: #4CAB90; /* Green */
+  border: 2px solid blue;
+  
+}
+.ldiv
+{
+	
+	height: 300px;
+	width: 520px;
+	overflow: auto;
+	background-color: white;
+
+}
+
+</style>
+
+
+<body >
+
+<div class="mydiv">
+	<h1> Extract Text from pdf </h1>
+	<p align="center"> PDF to Text</p>
+	<p align="cengter">
+  <form action="/home" method="POST"><button class="button1">Home </button></form>
+  <form action="/imgfiles" method="POST"><button class="button1">Img-2-Text </button></form>
+  <form action="/qr" method="POST"><button class="button1">QRcode </button></form>
+	</p>
+	
+</div>
+<center>
+<br><br><br><br>
+<p align="center">
+	<table border="5" width="500">
+		<tr>
+			<td width="250" height="50">
+				<form action="/pdf" method="POST" enctype="multipart/form-data">
+					&nbsp&nbsp&nbsp<label align="center">Select file:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+					<input type="file" name="pdf" accept=".pdf"><br>
+					&nbsp&nbsp&nbsp<label style="margin-top: 15px">Enter Page no.:  </label>
+					<input type="text" name="pgno">
+					&nbsp&nbsp<button type="Submit"  style="border-color: #D9FB00;font-size: 18px;background-color:#CCCCFF; width: 120px;border-radius: 50px"> Extract</button>
+				</form>
+			</td>
+		</tr>
+
+		<tr>
+			<td width="250" height="300">
+				<div class="ldiv"><textarea class="ldiv">{{ptext}}</textarea></div>
+			</td>
+		</tr>
+
+	</table>
+</p>
+
+
+
+
+</center>
+</body>
+</html>
+	
+

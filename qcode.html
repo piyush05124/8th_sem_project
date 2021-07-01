@@ -1,0 +1,187 @@
+<html>
+<head>
+<style>
+.myDiv {
+  border: 2px outset red;
+  background-color: lightblue;
+  text-align: center;
+  height: 180px;
+}
+</style>
+<style>
+.inputDiv {
+  border: 2px outset red;
+  background-color: lightblue;
+  text-align: center;
+  margin-left:   5px;
+  margin-right:   5px;
+  float: left
+}
+</style>
+
+
+<style>
+	.button {
+  background-color: #4CAB10; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  position: relative;
+  right: 650px;
+ 
+  bottom: 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #4CAB90; /* Green */
+  border: 1px solid green;
+  
+}
+</style>
+
+
+<style>
+	.button1 {
+  background-color: #4CAB20; /* Green */
+  
+  color: white;
+  padding: 10px 30px;
+  position: relative;
+  left:  540px;
+ float: left;
+  top:  10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.button1:hover {
+  background-color: #4CAB90; /* Green */
+  border: 2px solid blue;
+  
+}
+
+</style>
+
+
+
+
+
+<style>
+	.text {
+  background-color: #4CAB89; /* Green */
+  border: 2px outset blue;
+  color: white;
+  padding: 10px 30px;
+  position: relative;
+  left:  15px;
+  width: 250px;
+  height: 80px;
+ 
+  top: 10px;
+  text-align: center;
+  
+  margin-right: 30px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+}
+</style>
+
+<style>
+	.b2 {
+  background-color: #4CAB89; /* Green */
+  border: 2px outset blue;
+  color: white;
+  padding: 5px 30px;
+  position: relative;
+  left:  15px;
+  width: 150px;
+  height: 60px;
+ 
+  top: 100px;
+  text-align: center;
+  
+  margin-right:20px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+<div class="myDiv">
+  <h1>QR code Reader</h2>
+  <p><font size="5">Upload the QRcode image and get the decoded Text.</font> </p>
+
+  
+  <form action="/home" method="POST"><button class="button1">Home </button></form>
+  <form action="/imgfiles" method="POST"><button class="button1">Img-2-Text </button></form>
+  <form action="/PDF" method="POST"><button class="button1">PDF-2-Text </button></form>
+
+</div>
+<br><br><br><br>
+<p align="center">
+<table border="5" width="850" style="border-width: 5px; border-color: #FF5733 ">
+	<tr>
+		
+		<td height="100">
+			<form action="/down" method="POST" enctype="multipart/form-data">
+				<br>
+				<label style="font-size: 20px"> &nbspSelect QRcode Image: &nbsp</label>
+				<input type="file" name="img" accept="image/*"><br>
+&nbsp&nbsp<button type="submit" style="border-width: 3px;border-color: blue;font-size: 15px; background-color: #FFE300;border-radius: 20px; height: 30px;width: 150px; margin-top: 10px "> Decode</button>
+				
+			</form>
+			
+			
+		</td>
+	</tr>
+	<tr>
+		<td height="400" width="850">
+			<div style="overflow: auto;height: 450px; width: 850px">
+				<img src="{{qimg}}" style="margin-right: 80px;float: right; overflow: auto;">
+
+				<textarea style="font-size: 18px;border-width: 2px;overflow: auto;height: 450px; width: 450px; border-color: #0091FF "> your extracted text: &nbsp{{qtext}}</textarea>
+			</div>
+		</td>
+	</tr>
+</table>
+</p>
+
+
+
+
+
+
+</body>
+</html>

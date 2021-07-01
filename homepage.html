@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home page</title>
+</head>
+<style>
+	.headdiv{
+		border: 2px outset red;
+		background-color: #508DFF;
+		text-align: center;
+		height: 160px;
+
+	}
+</style>
+
+
+
+<style>
+	.bttn{
+		left: 300px;
+		border: 2px solid blue;
+		position: relative;
+		margin-top: 200px; 
+		width: 320px;
+		height: 80px;
+		background: #00A6FF;
+
+
+
+}
+
+	.bttn:hover{
+		background-color: #FCF500;
+		border: 4px: #C70039 ; 
+	}
+</style>
+
+
+<body bgcolor="#D9D9D9">
+	<div class="headdiv">
+		<h1>Extract Text, PDF and QRcode</h1>
+		<h4>Click on the buttons to perform your task</h4>
+
+	</div>
+
+	<center>
+		<form action="/PDF" method="POST">
+			<button class="bttn" style="float: left "><h4> PDF-2-Text</h4></button>
+		</form>
+		<form action="/imgfiles" method="POST">
+			<button class="bttn" style="float: left"><h4>  Img-2-text </h4></button>
+		</form>
+		<form action="/qr" method="POST">
+			<button class="bttn" style="float: left"><h4> QRcode Reader</h4></button>
+		</form>
+
+		
+
+</center>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<marquee behavior="alternate" direction="right" scrollamount="10"><h2>...Made by Piyush Pallavi Shruti Wasim...!</h2></marquee><br>
+
+</body>
+</html>

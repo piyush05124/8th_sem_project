@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>img2text</title>
+</head>
+
+<style>
+	.button1 {
+  background-color: #4CAB20; /* Green */
+  
+  color: white;
+  padding: 10px 30px;
+  position: relative;
+  left:  540px;
+ float: left;
+  top:  10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.button1:hover {
+  background-color: #4CAB90; /* Green */
+  border: 2px solid blue;
+  
+}
+.mydiv{
+		border: 2px solid red;
+		background-color: #C37299 ;
+		text-align: center; 
+
+	}
+.middiv
+{
+	text-align: center;
+}
+
+.bttn{
+	position: relative;
+	border: 2px solid blue;
+	width: 180px;
+
+	height: 50px;
+
+}	
+.bttn:hover{
+		background-color: #FCF500;
+		border: 4px: #C70039 ; 
+	}
+
+.bttn1
+{
+	position: relative;
+	border: 2px solid blue;
+	width: 200px;
+
+	height: 50px;
+	left: 30px;
+	bottom: 10px
+}	
+.bttn1:hover
+{
+	background-color: #FCF500;
+		border: 4px: #C70039 ;
+}
+
+.ldiv
+{
+	
+	height: 400px;
+	width: 400px;
+	overflow: auto;
+	background-color: white;
+
+}
+
+
+</style>
+
+
+<body >
+
+<div class="mydiv">
+	<h1> Extract Text from Image </h1>
+	<p align="center"> Image to Text</p>
+	<form action="/home" method="POST"><button class="button1">Home </button></form>
+  <form action="/PDF" method="POST"><button class="button1">PDF-2-Text </button></form>
+  <form action="/qr" method="POST"><button class="button1">QRcode </button></form>
+	
+</div><br><br><br>
+<p align="center">
+<table border="5" width="800" style="float: center;margin-left:  400px;" >
+	
+	<tr >
+		<td width="200" height="400">
+		 <div class="ldiv"><p><img src="{{impath}}" ></p></div>
+		</td>
+		<td width="130" height="400"> 
+			<div class="ldiv"><textarea style="overflow: auto;width: 450px;height: 500px">{{extext}}</textarea></div>
+		</td>
+	</tr>
+		
+</table>
+</p>
+
+	<table border="5" width="823" style="float: center;position: relative;left: 400px;top:-17px">
+		<tr  style="float: center;width: 200px;margin-left: 300px;">
+			<td height="50" width="400">
+
+			<form action="/upload_image" method="POST" enctype="multipart/form-data">
+				 <br>
+				 <div align="center">
+				<label for="Document type" style="float: left; font-size: 15px; font: bold;"> &nbsp &nbsp Choose Document:  &nbsp</label>
+  				<select name="Document type" id="Document type" style="float: left;">
+				  	<option value="">---select---</option>
+				  	<option value="non document">1. non-document image</option>
+				    <option value="Adhar card">2. Adhar card</option>
+				    <option value="voter card">3. Voter card</option>
+				    <option value="pan card">4. Pan card</option>
+				</select></div><br><br>
+<input type="file" name="img" accept="image/*" style="float: left; margin-left: 15px; padding-bottom: 20px"><br>
+<p align="center"><button class="bttn1" type="submit" style="float: left;"> Submit </button></p>
+			</form>
+			</tr>
+		</td>
+	</tr>
+	</table>
+
+<!---------------------------------------------------------------------------------------->
+
+</body>
+</html>
+	
+
